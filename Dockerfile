@@ -5,4 +5,5 @@ ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 
 EXPOSE 5678
 
-CMD ["tini", "--", "/docker-entrypoint.sh", "start"]
+# Start n8n using the official entrypoint
+CMD ["/docker-entrypoint.sh", "n8n"]
