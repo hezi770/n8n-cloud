@@ -5,5 +5,5 @@ ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 
 EXPOSE 5678
 
-# Use shell to keep n8n in foreground
-CMD ["sh", "-c", "n8n start"]
+# שמירה על התהליך בחיים גם אם יש restart זמני
+CMD ["bash", "-c", "while true; do n8n start; sleep 5; done"]
